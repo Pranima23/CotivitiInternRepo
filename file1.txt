@@ -1,0 +1,2 @@
+This is file handling test text.
+It is a beautiful day.Welcome to Python world! 
