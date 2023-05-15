@@ -1,4 +1,6 @@
--- Here I have created a database for an online book store using PostgreSQL
+-- Here I have created a database for an online book store 
+-- using a sample ER diagram from the internet 'bookstoreERsample.png'
+-- and PgAdmin (PostgreSQL)
 -- and queried the database for useful information.
 
 ------------creating tables--------------
