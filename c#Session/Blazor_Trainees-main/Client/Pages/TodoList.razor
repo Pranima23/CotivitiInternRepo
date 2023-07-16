@@ -1,0 +1,52 @@
+﻿@page "/TodoList"
+@using BlazorApp.Shared
+@inject HttpClient Http
+<h3>To do List</h3>
+
+<div class="row">
+    <a href="TodoCreate" class="btn btn-primary">Create</a>
+</div>
+<div class="row">
+    @if (toDos == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in toDos)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Title</td>
+                        <td>@item.Description</td>
+                        <td>@item.CreatedDate.ToShortDateString()</td>
+                        <td>
+                            <a href="/TodoEdit/@item.Id">Edit</a>
+                            <a href="/TodoDelete/@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    private ToDo[]? toDos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        toDos = await Http.GetFromJsonAsync<ToDo[]>("api/ToDos");
+    }
+}

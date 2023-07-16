@@ -1,0 +1,15 @@
+D:\Dotnet\LinqDemo\LinqDemo\bin\Debug\net7.0\LinqDemo.exe
+D:\Dotnet\LinqDemo\LinqDemo\bin\Debug\net7.0\LinqDemo.deps.json
+D:\Dotnet\LinqDemo\LinqDemo\bin\Debug\net7.0\LinqDemo.runtimeconfig.json
+D:\Dotnet\LinqDemo\LinqDemo\bin\Debug\net7.0\LinqDemo.dll
+D:\Dotnet\LinqDemo\LinqDemo\bin\Debug\net7.0\LinqDemo.pdb
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\LinqDemo.csproj.AssemblyReference.cache
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\LinqDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\LinqDemo.AssemblyInfoInputs.cache
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\LinqDemo.AssemblyInfo.cs
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\LinqDemo.csproj.CoreCompileInputs.cache
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\LinqDemo.dll
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\refint\LinqDemo.dll
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\LinqDemo.pdb
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\LinqDemo.genruntimeconfig.cache
+D:\Dotnet\LinqDemo\LinqDemo\obj\Debug\net7.0\ref\LinqDemo.dll

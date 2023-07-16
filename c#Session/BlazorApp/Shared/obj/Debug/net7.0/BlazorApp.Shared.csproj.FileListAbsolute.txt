@@ -1,0 +1,12 @@
+D:\Dotnet\BlazorApp\Shared\bin\Debug\net7.0\BlazorApp.Shared.deps.json
+D:\Dotnet\BlazorApp\Shared\bin\Debug\net7.0\BlazorApp.Shared.dll
+D:\Dotnet\BlazorApp\Shared\bin\Debug\net7.0\BlazorApp.Shared.pdb
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\BlazorApp.Shared.csproj.AssemblyReference.cache
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\BlazorApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\BlazorApp.Shared.AssemblyInfoInputs.cache
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\BlazorApp.Shared.AssemblyInfo.cs
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\BlazorApp.Shared.csproj.CoreCompileInputs.cache
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\BlazorApp.Shared.dll
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\refint\BlazorApp.Shared.dll
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\BlazorApp.Shared.pdb
+D:\Dotnet\BlazorApp\Shared\obj\Debug\net7.0\ref\BlazorApp.Shared.dll

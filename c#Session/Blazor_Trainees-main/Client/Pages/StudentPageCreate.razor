@@ -1,0 +1,27 @@
+﻿@page "/StudentPage/Create";
+@inject HttpClient httpclient
+@inject NavigationManager navigationManger
+<h3>StudentPageCreate</h3>
+<div class="row">
+    <EditForm Model="@student" OnValidSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
+        <div class="form-control">
+            <label for="Name">Name</label>
+            <InputText @bind-Value="student.Name" />
+            <ValidationMessage For="@(()=>student.Name)"></ValidationMessage>
+        </div>
+        <div class="form-control">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private Student student = new();
+
+    private async Task HandleSubmit()
+    {
+        await httpclient.PostAsJsonAsync<Student>("api/students", student);
+        navigationManger.NavigateTo("/studentlist");
+    }
+}

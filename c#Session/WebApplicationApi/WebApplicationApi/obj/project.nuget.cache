@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "w/lyd9lyHQQ8gij1/nC39jbffHcWVhljfS1OWtc4ttcL0MEh/uRyxttZcGSG/p9O7frqoWIChopueaqrRoscJw==",
+  "success": true,
+  "projectFilePath": "D:\\Dotnet\\WebApplicationApi\\WebApplicationApi\\WebApplicationApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nitesh.shrestha\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.2\\microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
+    "C:\\Users\\nitesh.shrestha\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\nitesh.shrestha\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\nitesh.shrestha\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\nitesh.shrestha\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\nitesh.shrestha\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\nitesh.shrestha\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,44 @@
+﻿@page "/TodoCreate"
+
+@inject HttpClient httpClient
+
+@inject NavigationManager navigationManager
+
+<h3>Todo Create</h3>
+<PageTitle>To-Do Create</PageTitle>
+<div class="row">
+    <EditForm Model="@toDo" OnValidSubmit="HandleSubmit" class="">
+        <DataAnnotationsValidator>
+
+        </DataAnnotationsValidator>
+        <div>
+            <label for="">Title</label>
+            <InputText @bind-Value="toDo.Title" class="form-control"></InputText>
+            <ValidationMessage For="@(()=>toDo.Title)"></ValidationMessage>
+        </div>
+        <div>
+            <label for="">Description</label>
+            <InputText @bind-Value="toDo.Description" class="form-control"></InputText>
+            <ValidationMessage For="@(()=>toDo.Description)"></ValidationMessage>
+        </div>
+        <div>
+            <label for="">Date</label>
+            <InputDate @bind-Value="toDo.CreatedDate" class="form-control"></InputDate>
+            <ValidationMessage For="@(()=>toDo.CreatedDate)"></ValidationMessage>
+        </div>
+        <div class="form-control col-4">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private ToDo toDo = new ToDo();
+
+
+    private async Task HandleSubmit()
+    {
+        await httpClient.PostAsJsonAsync<ToDo>("api/ToDos", toDo);
+        navigationManager.NavigateTo("/TodoList");
+    }
+}

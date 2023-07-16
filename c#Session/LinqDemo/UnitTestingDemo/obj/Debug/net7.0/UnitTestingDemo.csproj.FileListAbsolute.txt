@@ -1,0 +1,15 @@
+D:\Dotnet\LinqDemo\UnitTestingDemo\bin\Debug\net7.0\UnitTestingDemo.exe
+D:\Dotnet\LinqDemo\UnitTestingDemo\bin\Debug\net7.0\UnitTestingDemo.deps.json
+D:\Dotnet\LinqDemo\UnitTestingDemo\bin\Debug\net7.0\UnitTestingDemo.runtimeconfig.json
+D:\Dotnet\LinqDemo\UnitTestingDemo\bin\Debug\net7.0\UnitTestingDemo.dll
+D:\Dotnet\LinqDemo\UnitTestingDemo\bin\Debug\net7.0\UnitTestingDemo.pdb
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\UnitTestingDemo.csproj.AssemblyReference.cache
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\UnitTestingDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\UnitTestingDemo.AssemblyInfoInputs.cache
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\UnitTestingDemo.AssemblyInfo.cs
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\UnitTestingDemo.csproj.CoreCompileInputs.cache
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\UnitTestingDemo.dll
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\refint\UnitTestingDemo.dll
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\UnitTestingDemo.pdb
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\UnitTestingDemo.genruntimeconfig.cache
+D:\Dotnet\LinqDemo\UnitTestingDemo\obj\Debug\net7.0\ref\UnitTestingDemo.dll

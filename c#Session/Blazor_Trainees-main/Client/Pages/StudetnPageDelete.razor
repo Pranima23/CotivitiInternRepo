@@ -1,0 +1,48 @@
+﻿@page "/StudentPage/Delete/{id:int}";
+@inject HttpClient httpclient
+@inject NavigationManager navigationManger
+
+<h1>@Id</h1>
+@if (found)
+{
+    <div>
+        <div class="form-control">
+            <label for="Name">Name</label>
+            <div>@student.Name</div>
+        </div>
+        <div class="row">
+            <button class="btn btn-danger" @onclick="HandleSubmit">Delete</button>
+        </div>
+        <div class="row">
+            <a href="/studentlist">Back to list</a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        Not found !
+    </div>
+}
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+
+    public bool found = false;
+
+    Student student = new();
+
+    protected async override Task OnInitializedAsync()
+    {
+        student = await httpclient.GetFromJsonAsync<Student>("/api/Students/" + Id);
+
+        found = student == null ? false : true;
+    }
+
+    private async Task HandleSubmit()
+    {
+        await httpclient.DeleteAsync("api/students/" + Id);
+        navigationManger.NavigateTo("/studentlist");
+    }
+}

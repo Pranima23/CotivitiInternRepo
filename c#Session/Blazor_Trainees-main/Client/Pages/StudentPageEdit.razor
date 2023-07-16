@@ -1,0 +1,50 @@
+﻿@page "/StudentPage/Edit/{id:int}";
+@inject HttpClient httpclient
+@inject NavigationManager navigationManger
+
+<h1>@Id</h1>
+@if (found)
+{
+    <EditForm Model="@student" OnValidSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
+        <div class="form-control">
+            <label for="Name">Name</label>
+            <InputText @bind-Value="student.Name" />
+            <ValidationMessage For="@(()=>student.Name)"></ValidationMessage>
+        </div>
+        <div class="form-control">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </EditForm>
+    <div class="row">
+        <a href="/studentlist">Back to list</a>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        Not found !
+    </div>
+}
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+
+    public bool found=false;
+
+    Student student = new();
+
+    protected async override Task OnInitializedAsync()
+    {
+        student = await httpclient.GetFromJsonAsync<Student>("/api/Students/" + Id);
+
+        found = student == null ? false : true;
+    }
+
+    private async Task HandleSubmit()
+    {
+        await httpclient.PutAsJsonAsync<Student>("api/students/" + Id, student);
+        navigationManger.NavigateTo("/studentlist");
+    }
+}

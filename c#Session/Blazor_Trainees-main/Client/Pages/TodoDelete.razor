@@ -1,0 +1,59 @@
+﻿@page "/TodoDelete/{id:int}"
+@inject HttpClient httpclient
+@inject NavigationManager navigationManager
+
+<h3>To do Delete</h3>
+@if (notFound)
+{
+    <div class="alert alert-danger">Not found!</div>
+}
+else
+{
+    <div class="row">
+        <div>
+            Are you sure you want to delete?
+        </div>
+        <div>
+            <div>
+                Id : @todo.Id
+            </div>
+            <div>
+                Title : @todo.Title
+            </div>
+            <div>
+                Description : @todo.Description
+            </div>
+            <div>
+                Created Date : @todo.CreatedDate.ToShortDateString()
+            </div>
+            <div class="form-control col-4">
+                <button type="submit" class="btn btn-danger" @onclick="HandleSubmit">Delete</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private ToDo todo = new();
+
+    private bool notFound = false;
+
+    protected async override Task OnInitializedAsync()
+    {
+        todo = await httpclient.GetFromJsonAsync<ToDo>("api/todos/" + Id);
+
+        if (todo == null)
+        {
+            notFound = true;
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        await httpclient.DeleteAsync("api/todos/" + Id);
+        navigationManager.NavigateTo("/TodoList");
+    }
+}

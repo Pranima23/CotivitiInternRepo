@@ -1,0 +1,66 @@
+﻿@page "/TodoEdit/{id:int}"
+
+@inject HttpClient httpClient
+
+@inject NavigationManager navigationManager
+
+
+<h3>Todo Edit</h3>
+<PageTitle>To-Do Edit</PageTitle>
+
+<div class="row">
+    @if (notFound)
+    {
+        <div>Not found</div>
+    }
+    else
+    {
+        <EditForm Model="@toDo" OnValidSubmit="HandleSubmit" class="">
+            <DataAnnotationsValidator>
+
+            </DataAnnotationsValidator>
+            <div>
+                <label for="">Title</label>
+                <InputText @bind-Value="toDo.Title" class="form-control"></InputText>
+                <ValidationMessage For="@(()=>toDo.Title)"></ValidationMessage>
+            </div>
+            <div>
+                <label for="">Description</label>
+                <InputText @bind-Value="toDo.Description" class="form-control"></InputText>
+                <ValidationMessage For="@(()=>toDo.Description)"></ValidationMessage>
+            </div>
+            <div>
+                <label for="">Date</label>
+                <InputDate @bind-Value="toDo.CreatedDate" class="form-control"></InputDate>
+                <ValidationMessage For="@(()=>toDo.CreatedDate)"></ValidationMessage>
+            </div>
+            <div class="form-control col-4">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </EditForm>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    ToDo toDo = new();
+
+    bool notFound = false;
+
+    protected async override Task OnInitializedAsync()
+    {
+        toDo = await httpClient.GetFromJsonAsync<ToDo>("/api/Todos/" + Id);
+        if (toDo is null)
+        {
+            notFound = true;
+        }
+    }
+
+    public async Task HandleSubmit()
+    {
+        await httpClient.PutAsJsonAsync<ToDo>("api/todos/" + Id, toDo);
+        navigationManager.NavigateTo("/TodoList");
+    }
+}
